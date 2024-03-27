@@ -1,0 +1,230 @@
+[
+  {
+    "name": "Sunshine in a Glass",
+    "aka": "orange juice",
+    "description": "Freshly squeezed orange juice, pure vitamin C delight",
+    "price": 3,
+    "ingredients": "orange",
+    "category": "Juice",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/orange.jpg"
+  },
+  {
+    "name": "Classic Lemonade",
+    "description": "A thirst-quenching mix of fresh lemons and sugar",
+    "price": 2.5,
+    "ingredients": "lemon, sugar, water",
+    "category": "Juice",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/lemonade.jpg"
+  },
+  {
+    "name": "The Crunchy Apple",
+    "aka": "apple juice",
+    "description": "100% apple juice, a taste of crisp autumn mornings",
+    "price": 2.5,
+    "ingredients": "apple",
+    "category": "Juice",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/applejuice.jpg"
+  },
+  {
+    "name": "Kiwi Banana Blast",
+    "description": "A refreshing blend of kiwi and banana",
+    "price": 3.5,
+    "ingredients": "kiwi, banana",
+    "category": "Juice",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/kiwijuice.jpg"
+  },
+  {
+    "name": "The Ruby Refresher",
+    "aka": "grapefruit juice",
+    "description": "Pink grapefruit juice, a burst of tangy goodness",
+    "price": 3,
+    "ingredients": "grapefruit",
+    "category": "Juice",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/grapefruitjuice.jpg"
+  },
+  {
+    "name": "Tropical Escape",
+    "aka": "tropical cocktail",
+    "description": "A vibrant mix of papaya, mango, and orange juice",
+    "price": 3.5,
+    "ingredients": "papaya, mango, orange",
+    "category": "Juice",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/cocktail.jpg"
+  },
+  {
+    "name": "The Green Glow",
+    "aka": "spinach & apple blend",
+    "description": "A healthy blend of spinach, apple, and ginger",
+    "price": 4,
+    "ingredients": "spinach, apple, ginger",
+    "category": "Juice",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/appleblend.jpg"
+  },
+  {
+    "name": "The Kickstart",
+    "aka": "espresso",
+    "description": "A bold espresso shot to jumpstart your day",
+    "price": 1.5,
+    "ingredients": "espresso",
+    "category": "Coffee",
+    "hot": true,
+    "imageUrl": "https://ik.imagekit.io/byte/espresso.jpg"
+  },
+  {
+    "name": "The Night Owl",
+    "aka": "cold-brew",
+    "description": "Cold brew for a slow sip, smooth finish",
+    "price": 3,
+    "ingredients": "coffee grounds, cold water",
+    "category": "Coffee",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/coldbrew.jpg"
+  },
+  {
+    "name": "The Cloud Whisperer",
+    "aka": "cappuccino",
+    "description": "Dreamy blend of espresso, steamed milk, and milk foam",
+    "price": 2.5,
+    "ingredients": "espresso, steamed milk, milk foam",
+    "category": "Coffee",
+    "hot": true,
+    "imageUrl": "https://ik.imagekit.io/byte/cappuccino.jpg"
+  },
+  {
+    "name": "The Chocolaty Fix",
+    "aka": "mocha",
+    "description": "Mocha magic - latte with a delightful chocolate twist",
+    "price": 3,
+    "ingredients": "espresso, steamed milk, chocolate flavoring",
+    "category": "Coffee",
+    "hot": true,
+    "imageUrl": "https://ik.imagekit.io/byte/mocha.jpg"
+  },
+  {
+    "name": "Berry Burst",
+    "aka": "fresh berry pancakes",
+    "description": "Classic pancakes topped with fresh berries and whipped cream",
+    "price": 6,
+    "ingredients": "pancakes, fresh berries, whipped cream",
+    "category": "Pancakes",
+    "hot": true,
+    "imageUrl": "https://ik.imagekit.io/byte/berrypancake.jpg"
+  },
+  {
+    "name": "Chocolate Chip Delight",
+    "aka": "chocolate pancake",
+    "description": "Buttermilk pancakes studded with chocolate chips, served with chocolate sauce",
+    "price": 6.5,
+    "ingredients": "pancakes, chocolate chips, chocolate sauce",
+    "category": "Pancakes",
+    "hot": true,
+    "imageUrl": "https://ik.imagekit.io/byte/chocolatepancake.jpg"
+  },
+  {
+    "name": "Lemon Blueberry Delight",
+    "description": "Light and fluffy lemon cake with fresh blueberries and lemon glaze",
+    "price": 4,
+    "ingredients": "flour, sugar, eggs, fat (butter or oil), lemon (zest and juice), liquids (milk or buttermilk), leavening (baking powder), blueberries, lemon glaze",
+    "category": "Cake",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/lemoncake.jpg"
+  },
+  {
+    "name": "Chocolate Decadence",
+    "aka": "chocolate cake",
+    "description": "Rich chocolate cake with chocolate ganache frosting",
+    "price": 4.5,
+    "ingredients": "flour, cocoa powder, sugar, eggs, fat (butter or oil), milk, chocolate (chips or melted)",
+    "category": "Cake",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/chocolatecake.jpg"
+  },
+  {
+    "name": "Classic Carrot Cake",
+    "description": "Moist carrot cake with cream cheese frosting and walnuts",
+    "price": 4,
+    "ingredients": "flour, sugar, eggs, oil, carrots, spices (cinnamon, nutmeg), cream cheese frosting, walnuts (optional)",
+    "category": "Cake",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/carrotcake.jpg"
+  },
+  {
+    "name": "Vegetable Omelette",
+    "description": "A classic omelette filled with your choice of vegetables",
+    "price": 6,
+    "ingredients": "eggs, vegetables, cheese (optional)",
+    "category": "Omelette",
+    "hot": true,
+    "imageUrl": "https://ik.imagekit.io/byte/omelette.jpg"
+  },
+  {
+    "name": "Blueberry Muffin",
+    "description": "Freshly baked blueberry muffin",
+    "price": 2.5,
+    "ingredients": "blueberry, eggs, baking powder",
+    "category": "Sweets",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/muffin.jpg"
+  },
+  {
+    "name": "Chocolate Frosted Donut with Sprinkles",
+    "description": "A light and fluffy donut covered in rich chocolate frosting and colorful sprinkles",
+    "price": 1.5,
+    "ingredients": "flour, sugar, eggs, milk, chocolate frosting, sprinkles",
+    "category": "Sweets",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/chocolate-donut-sprinkles.jpg"
+  },
+  {
+    "name": "Chocolate Croissant",
+    "description": "Flaky croissant filled with rich chocolate",
+    "price": 2.5,
+    "ingredients": "dough, chocolate, egg wash (optional)",
+    "category": "Sweets",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/croissant.jpg"
+  },
+  {
+    "name": "Cinnamon Roll",
+    "description": "Warm, gooey cinnamon roll with a sweet glaze",
+    "price": 3.5,
+    "ingredients": "dough, cinnamon sugar filling, cream cheese frosting (optional)",
+    "category": "Sweets",
+    "hot": true,
+    "imageUrl": "https://ik.imagekit.io/byte/cinnamonroll.jpg"
+  },
+  {
+    "name": "Millefeuille",
+    "description": "A classic French pastry with layers of puff pastry and rich pastry cream",
+    "price": 2,
+    "ingredients": "puff pastry dough, pastry cream, glaze",
+    "category": "Sweets",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/millefeuilles.jpg"
+  },
+  {
+    "name": "Breakfast Burrito",
+    "description": "A customizable breakfast wrap filled with scrambled eggs, your choice of cheese, and other delicious options.",
+    "price": 5.99,
+    "ingredients": "tortilla, scrambled eggs, black beans, bell peppers, onions, spinach, tomatoes, sour cream, guacamole",
+    "category": "Sandwich",
+    "hot": true,
+    "imageUrl": "https://ik.imagekit.io/byte/burrito.jpg"
+  },
+  {
+    "name": "Avocado Toast",
+    "description": "Freshly smashed avocado on toasted bread, drizzled with olive oil and seasoned with salt and pepper. Can be customized with additional toppings.",
+    "price": 4.25,
+    "ingredients": "avocado, toasted bread, olive oil, salt, pepper, poached egg",
+    "category": "Sandwich",
+    "hot": false,
+    "imageUrl": "https://ik.imagekit.io/byte/avocado-toast.jpg"
+  }
+]
