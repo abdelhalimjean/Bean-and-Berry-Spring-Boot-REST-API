@@ -1,4 +1,4 @@
-insert into public.menu_item (ake, category, description, hot, image_url, ingredients, name, price)
+insert into public.menu_item (other_name, category, description, hot, image_url, ingredients, name, price)
 values (null, 'Juice', 'Freshly squeezed orange juice, pure vitamin C delight', false,
         'https://ik.imagekit.io/byte/orange.jpg', 'orange', 'Sunshine in a Glass', 3),
        (null, 'Juice', 'A thirst-quenching mix of fresh lemons and sugar', false,

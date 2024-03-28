@@ -18,7 +18,7 @@ public class MenuItem {
   @Column(nullable = false)
   private String name;
 
-  private String ake;
+  private String otherName;
   private String description;
 
   @Column(nullable = false)
@@ -45,12 +45,12 @@ public class MenuItem {
     this.name = name;
   }
 
-  public String getAke() {
-    return ake;
+  public String getOtherName() {
+    return otherName;
   }
 
-  public void setAke(String ake) {
-    this.ake = ake;
+  public void setOtherName(String otherName) {
+    this.otherName = otherName;
   }
 
   public String getDescription() {
