@@ -65,9 +65,9 @@ to insert the data yourself.
 
 #### Search MenuItems By Name
 
-    URL: /api/menu/search?keyword=chocolate
+    URL: /api/menu/search?keyword=chocolate&category=cake
     Method: GET
-    Description: Retrieve a list of menu items where the name or ingredients contain the value sent in the request parameter.
+    Description: Retrieve a list of menu items based on the keyword (name or ingredient) and category.
 
 #### Get MenuItem by ID
 

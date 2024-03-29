@@ -65,10 +65,15 @@ public class MenuController {
   }
 
   @GetMapping("/search")
-  public ResponseEntity<List<MenuItem>> searchMovies(@RequestParam String keyword) {
-    List<MenuItem> menuItems =
-        menuItemRepository.findAllByNameContainingIgnoreCaseOrIngredientsContainingIgnoreCase(
-            keyword, keyword);
+  public ResponseEntity<List<MenuItem>> searchMovies(
+      @RequestParam String keyword, @RequestParam(required = false) String category) {
+    List<MenuItem> menuItems;
+
+    if (category != null) {
+      menuItems = menuItemRepository.searchByCategoryAndKeyword(category, keyword);
+    } else {
+      menuItems = menuItemRepository.searchByKeyword(keyword);
+    }
     return new ResponseEntity<>(menuItems, HttpStatus.OK);
   }
 
