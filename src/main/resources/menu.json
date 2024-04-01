@@ -1,7 +1,7 @@
 [
   {
     "name": "Sunshine in a Glass",
-    "aka": "orange juice",
+    "otherName": "orange juice",
     "description": "Freshly squeezed orange juice, pure vitamin C delight",
     "price": 3,
     "ingredients": "orange",
@@ -20,7 +20,7 @@
   },
   {
     "name": "The Crunchy Apple",
-    "aka": "apple juice",
+    "otherName": "apple juice",
     "description": "100% apple juice, a taste of crisp autumn mornings",
     "price": 2.5,
     "ingredients": "apple",
@@ -39,7 +39,7 @@
   },
   {
     "name": "The Ruby Refresher",
-    "aka": "grapefruit juice",
+    "otherName": "grapefruit juice",
     "description": "Pink grapefruit juice, a burst of tangy goodness",
     "price": 3,
     "ingredients": "grapefruit",
@@ -49,7 +49,7 @@
   },
   {
     "name": "Tropical Escape",
-    "aka": "tropical cocktail",
+    "otherName": "tropical cocktail",
     "description": "A vibrant mix of papaya, mango, and orange juice",
     "price": 3.5,
     "ingredients": "papaya, mango, orange",
@@ -59,7 +59,7 @@
   },
   {
     "name": "The Green Glow",
-    "aka": "spinach & apple blend",
+    "otherName": "spinach & apple blend",
     "description": "A healthy blend of spinach, apple, and ginger",
     "price": 4,
     "ingredients": "spinach, apple, ginger",
@@ -69,7 +69,7 @@
   },
   {
     "name": "The Kickstart",
-    "aka": "espresso",
+    "otherName": "espresso",
     "description": "A bold espresso shot to jumpstart your day",
     "price": 1.5,
     "ingredients": "espresso",
@@ -79,7 +79,7 @@
   },
   {
     "name": "The Night Owl",
-    "aka": "cold-brew",
+    "otherName": "cold-brew",
     "description": "Cold brew for a slow sip, smooth finish",
     "price": 3,
     "ingredients": "coffee grounds, cold water",
@@ -89,7 +89,7 @@
   },
   {
     "name": "The Cloud Whisperer",
-    "aka": "cappuccino",
+    "otherName": "cappuccino",
     "description": "Dreamy blend of espresso, steamed milk, and milk foam",
     "price": 2.5,
     "ingredients": "espresso, steamed milk, milk foam",
@@ -99,7 +99,7 @@
   },
   {
     "name": "The Chocolaty Fix",
-    "aka": "mocha",
+    "otherName": "mocha",
     "description": "Mocha magic - latte with a delightful chocolate twist",
     "price": 3,
     "ingredients": "espresso, steamed milk, chocolate flavoring",
@@ -109,7 +109,7 @@
   },
   {
     "name": "Berry Burst",
-    "aka": "fresh berry pancakes",
+    "otherName": "fresh berry pancakes",
     "description": "Classic pancakes topped with fresh berries and whipped cream",
     "price": 6,
     "ingredients": "pancakes, fresh berries, whipped cream",
@@ -119,7 +119,7 @@
   },
   {
     "name": "Chocolate Chip Delight",
-    "aka": "chocolate pancake",
+    "otherName": "chocolate pancake",
     "description": "Buttermilk pancakes studded with chocolate chips, served with chocolate sauce",
     "price": 6.5,
     "ingredients": "pancakes, chocolate chips, chocolate sauce",
@@ -138,7 +138,7 @@
   },
   {
     "name": "Chocolate Decadence",
-    "aka": "chocolate cake",
+    "otherName": "chocolate cake",
     "description": "Rich chocolate cake with chocolate ganache frosting",
     "price": 4.5,
     "ingredients": "flour, cocoa powder, sugar, eggs, fat (butter or oil), milk, chocolate (chips or melted)",
