@@ -2,92 +2,86 @@ package mr.springbootapi.controller;
 
 import java.util.List;
 
+import mr.springbootapi.dto.ApiResponse;
 import mr.springbootapi.entity.MenuItem;
 import mr.springbootapi.service.MenuItemService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-@RestController // Declare this class as a controller for handling web requests
-@RequestMapping("/api/menu") // Specifying that it will handle requests related to "/api/menu"
+@RestController
+@RequestMapping("/api/menu")
 public class MenuController {
-    /*
-      Inject an instance of MenuItemService, which is used for interacting with the repository to
-      access and manage menu items.
-    */
+
     private final MenuItemService menuItemService;
 
+    // Constructor injection of MenuItemService
     public MenuController(MenuItemService menuItemService) {
         this.menuItemService = menuItemService;
     }
 
-    /*
-     Define a method to handle GET requests to "/api/menu/all"
-     This method will retrieve a list of all menu items from the database
-    */
+    // Handler for listing all menu items
     @GetMapping("/all")
-    public ResponseEntity<List<MenuItem>> listAllMenuItems() {
-        return ResponseEntity.ok(menuItemService.listAllMenuItems());
+    public ResponseEntity<ApiResponse> listAllMenuItems() {
+        // Call service method to retrieve all menu items
+        List<MenuItem> menuItems = menuItemService.listAllMenuItems();
+        // Return ApiResponse with HTTP status code OK (200), success message, and menu items
+        return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Success", menuItems));
     }
 
-    /*
-      Define a method to handle GET requests with a path variable "{id}"
-      This allows you to retrieve a specific menu item by its ID.
-    */
+    // Handler for retrieving a menu item by ID
     @GetMapping("/{id}")
-    public ResponseEntity<MenuItem> getById(@PathVariable int id) {
-        return ResponseEntity.ok(menuItemService.getById(id));
+    public ResponseEntity<ApiResponse> getById(@PathVariable int id) {
+        // Call service method to retrieve the menu item by ID
+        MenuItem menuItem = menuItemService.getById(id);
+        // Return ApiResponse with HTTP status code OK (200), success message, and the retrieved menu item
+        return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Success", menuItem));
     }
 
-    /*
-      Define a method to handle POST requests to the base "/api/menu" URL
-      This method is used to create a new menu item.
-    */
+    // Handler for adding a new menu item
     @PostMapping()
-    public ResponseEntity<MenuItem> addMenuItem(@RequestBody MenuItem menuItem) {
-        return ResponseEntity.ok(menuItemService.addMenuItem(menuItem));
+    public ResponseEntity<ApiResponse> addMenuItem(@RequestBody MenuItem menuItem) {
+        // Call service method to add the new menu item
+        MenuItem addedMenuItem = menuItemService.addMenuItem(menuItem);
+        // Return ApiResponse with HTTP status code OK (200), success message, and the added menu item
+        return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Menu item added successfully", addedMenuItem));
     }
 
-    /*
-     Defines a method to handle PUT requests with a path variable "{id}". This method allows
-     updating an existing menu item based on its ID.
-    */
+    // Handler for updating an existing menu item
     @PutMapping("/{id}")
-    public ResponseEntity<MenuItem> updateMenuItem(
+    public ResponseEntity<ApiResponse> updateMenuItem(
             @PathVariable int id, @RequestBody MenuItem menuItem) {
-        return ResponseEntity.ok(menuItemService.updateMenuItem(id, menuItem));
+        // Call service method to update the menu item
+        MenuItem updatedMenuItem = menuItemService.updateMenuItem(id, menuItem);
+        // Return ApiResponse with HTTP status code OK (200), success message, and the updated menu item
+        return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Menu item updated successfully", updatedMenuItem));
     }
 
-    /*
-     Defines a method to handle DELETE requests with a path variable "{id}".
-     This method allows deleting a menu item based on its ID.
-    */
+    // Handler for deleting a menu item by ID
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteMenuItem(@PathVariable int id) {
+    public ResponseEntity<ApiResponse> deleteMenuItem(@PathVariable int id) {
+        // Call service method to delete the menu item by ID
         menuItemService.deleteMenuItem(id);
-        return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        // Return ApiResponse with HTTP status code OK (200) and success message
+        return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Menu item deleted successfully", null));
     }
 
-    /*
-     Defines a method to handle GET requests to "/api/menu/search". This method allows searching for
-     menu items based on a keyword and optionally a category.
-    */
+    // Handler for searching menu items by keyword and category
     @GetMapping("/search")
-    public ResponseEntity<List<MenuItem>> searchMenuItems(
+    public ResponseEntity<ApiResponse> searchMenuItems(
             @RequestParam String keyword, @RequestParam(required = false) String category) {
-        return ResponseEntity.ok(menuItemService.searchMenuItems(keyword, category));
+        // Call service method to search for menu items based on keyword and category
+        List<MenuItem> menuItems = menuItemService.searchMenuItems(keyword, category);
+        // Return ApiResponse with HTTP status code OK (200), success message, and the matched menu items
+        return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Success", menuItems));
     }
 
+    // Handler for adding multiple menu items in bulk
     @PostMapping("/bulk")
-    public ResponseEntity<List<MenuItem>> addMenuItems(@RequestBody List<MenuItem> menuItems) {
-        return ResponseEntity.ok(menuItemService.addMenuItems(menuItems));
+    public ResponseEntity<ApiResponse> addMenuItems(@RequestBody List<MenuItem> menuItems) {
+        // Call service method to add multiple menu items
+        List<MenuItem> addedMenuItems = menuItemService.addMenuItems(menuItems);
+        // Return ApiResponse with HTTP status code OK (200), success message, and the added menu items
+        return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Menu items added successfully", addedMenuItems));
     }
 }
