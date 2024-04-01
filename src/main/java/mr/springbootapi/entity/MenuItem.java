@@ -48,6 +48,11 @@ public class MenuItem {
     private String category;
     private boolean hot;
 
+    public MenuItem(String name, float price) {
+        this.name = name;
+        this.price = price;
+    }
+
     public Integer getId() {
         return id;
     }
