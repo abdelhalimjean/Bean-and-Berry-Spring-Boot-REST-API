@@ -13,6 +13,9 @@ import java.util.Optional;
 public class MenuItemServiceImpl implements MenuItemService {
     private final MenuItemRepository menuItemRepository;
 
+    /*
+      Inject an instance of MenuItemRepository, which is used for interacting with the database and manage the table menu_item.
+    */
     public MenuItemServiceImpl(MenuItemRepository menuItemRepository) {
         this.menuItemRepository = menuItemRepository;
     }
