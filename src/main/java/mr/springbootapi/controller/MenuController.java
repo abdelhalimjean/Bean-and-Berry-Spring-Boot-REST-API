@@ -13,14 +13,17 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/menu")
 public class MenuController {
 
+    // Declaring a private field of type MenuItemService to hold the injected dependency
     private final MenuItemService menuItemService;
 
-    // Constructor injection of MenuItemService
+    // Constructor of MenuController which takes an instance of MenuItemService as a parameter
+    // Spring will manage the creation of MenuItemService instances and provide one to this constructor when creating MenuController instances.
     public MenuController(MenuItemService menuItemService) {
+        // Assigning the passed MenuItemService instance to the menuItemService field
         this.menuItemService = menuItemService;
     }
 
-    // Handler for listing all menu items
+    // Endpoint for listing all menu items
     @GetMapping("/all")
     public ResponseEntity<ApiResponse> listAllMenuItems() {
         // Call service method to retrieve all menu items
@@ -29,7 +32,7 @@ public class MenuController {
         return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Success", menuItems));
     }
 
-    // Handler for retrieving a menu item by ID
+    // Endpoint for retrieving a menu item by ID
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse> getById(@PathVariable int id) {
         // Call service method to retrieve the menu item by ID
@@ -38,7 +41,7 @@ public class MenuController {
         return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Success", menuItem));
     }
 
-    // Handler for adding a new menu item
+    // Endpoint for adding a new menu item
     @PostMapping()
     public ResponseEntity<ApiResponse> addMenuItem(@RequestBody MenuItem menuItem) {
         // Call service method to add the new menu item
@@ -47,17 +50,16 @@ public class MenuController {
         return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Menu item added successfully", addedMenuItem));
     }
 
-    // Handler for updating an existing menu item
+    // Endpoint for updating an existing menu item
     @PutMapping("/{id}")
-    public ResponseEntity<ApiResponse> updateMenuItem(
-            @PathVariable int id, @RequestBody MenuItem menuItem) {
+    public ResponseEntity<ApiResponse> updateMenuItem(@PathVariable int id, @RequestBody MenuItem menuItem) {
         // Call service method to update the menu item
         MenuItem updatedMenuItem = menuItemService.updateMenuItem(id, menuItem);
         // Return ApiResponse with HTTP status code OK (200), success message, and the updated menu item
         return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Menu item updated successfully", updatedMenuItem));
     }
 
-    // Handler for deleting a menu item by ID
+    // Endpoint for deleting a menu item by ID
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponse> deleteMenuItem(@PathVariable int id) {
         // Call service method to delete the menu item by ID
@@ -66,17 +68,16 @@ public class MenuController {
         return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Menu item deleted successfully", null));
     }
 
-    // Handler for searching menu items by keyword and category
+    // Endpoint for searching menu items by keyword and category
     @GetMapping("/search")
-    public ResponseEntity<ApiResponse> searchMenuItems(
-            @RequestParam String keyword, @RequestParam(required = false) String category) {
+    public ResponseEntity<ApiResponse> searchMenuItems(@RequestParam String keyword, @RequestParam(required = false) String category) {
         // Call service method to search for menu items based on keyword and category
         List<MenuItem> menuItems = menuItemService.searchMenuItems(keyword, category);
         // Return ApiResponse with HTTP status code OK (200), success message, and the matched menu items
         return ResponseEntity.ok(new ApiResponse(HttpStatus.OK.value(), "Success", menuItems));
     }
 
-    // Handler for adding multiple menu items in bulk
+    // Endpoint for adding multiple menu items
     @PostMapping("/bulk")
     public ResponseEntity<ApiResponse> addMenuItems(@RequestBody List<MenuItem> menuItems) {
         // Call service method to add multiple menu items

@@ -8,10 +8,13 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @ControllerAdvice
+// This annotation marks a class as a global exception handler.
+// Methods within this class will be executed whenever exceptions are thrown by any controller.
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(ItemNotFoundException.class)
     @ResponseBody
+    // Handles ItemNotFoundException and returns a response with NOT FOUND status
     public ResponseEntity<ApiResponse> handleItemNotFoundException(ItemNotFoundException ex) {
         // Create an ApiResponse with the exception message and status code
         ApiResponse response = new ApiResponse(HttpStatus.NOT_FOUND.value(), ex.getMessage(), null);
@@ -21,6 +24,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(InvalidPriceException.class)
     @ResponseBody
+    // Handles InvalidPriceException and returns a response with BAD REQUEST status
     public ResponseEntity<ApiResponse> handleInvalidPriceException(InvalidPriceException ex) {
         // Create an ApiResponse with the exception message and status code
         ApiResponse response = new ApiResponse(HttpStatus.BAD_REQUEST.value(), ex.getMessage(), null);
@@ -30,6 +34,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(GenericException.class)
     @ResponseBody
+    // Handles GenericException and returns a response with INTERNAL SERVER ERROR status
     public ResponseEntity<ApiResponse> handleGenericException(GenericException ex) {
         // Create an ApiResponse with the exception message and status code
         ApiResponse response = new ApiResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), ex.getMessage(), null);
@@ -38,6 +43,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(Exception.class)
+    // Handles any other uncaught exceptions and returns a generic error response
     public ResponseEntity<ApiResponse> handleException(Exception ex) {
         // Create an ApiResponse with a generic error message and status code
         ApiResponse response = new ApiResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), "An unexpected error occurred: " + ex.getMessage(), null);
