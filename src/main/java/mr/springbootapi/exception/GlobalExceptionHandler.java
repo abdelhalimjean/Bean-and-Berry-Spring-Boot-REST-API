@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 */
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(ItemNotFoundException.class)
+    @ExceptionHandler(ItemNotFoundException.class) //It means that this method will be called to handle when ItemNotFoundException is thrown
     @ResponseBody
     public ResponseEntity<String> handleItemNotFoundException(ItemNotFoundException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
