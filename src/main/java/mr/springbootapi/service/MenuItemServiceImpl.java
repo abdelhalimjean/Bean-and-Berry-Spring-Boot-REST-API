@@ -34,7 +34,21 @@ public class MenuItemServiceImpl implements MenuItemService {
     public MenuItem getById(int id) {
         return menuItemRepository
                 .findById(id)
-                .orElseThrow(() -> new ItemNotFoundException("Item not found"));
+    /*
+     Use the repository to find a menu item with the given ID.
+     The result is wrapped in an Optional object to handle the possibility
+     of not finding a matching item.
+    */
+    Optional<MenuItem> menuItemOptional = menuItemRepository.findById(id);
+    // Check if the Optional object contains a value (meaning a menu item was found)
+    if (menuItemOptional.isPresent()) {
+      // If a menu item is found, extract it from the Optional object and return it
+      return menuItemOptional.get();
+    } else {
+      // If no menu item is found, throw an ItemNotFoundException
+      throw new ItemNotFoundException("Item not found") ;
+    }
+                
     }
 
     @Override
