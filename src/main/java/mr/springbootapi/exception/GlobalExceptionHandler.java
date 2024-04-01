@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @ControllerAdvice
+/*
+ This annotation marks a class as a global exception handler.
+ Methods within this class will be executed whenever exceptions are thrown by any controller.
+*/
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(ItemNotFoundException.class)
