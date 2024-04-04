@@ -1,4 +1,4 @@
-package mr.springbootapi;
+package mr.springbootapi.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -18,6 +18,7 @@ import jakarta.persistence.Table;
 */
 @Table(name = "menu_item")
 public class MenuItem {
+
   /*
    This field represents the unique identifier (primary key) of the menu item.
    It's annotated with @Id to mark it as the primary key.
@@ -47,6 +48,15 @@ public class MenuItem {
   private String ingredients;
   private String category;
   private boolean hot;
+
+  public MenuItem() {
+    super();
+  }
+
+  public MenuItem(String name, float price) {
+    this.name = name;
+    this.price = price;
+  }
 
   public Integer getId() {
     return id;
